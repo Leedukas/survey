@@ -1,0 +1,71 @@
+<style>
+#title{text-align: center;}
+#description{text-align: center; font-size: 20px;}
+#page{background: url("https://i.ibb.co/8zRF9xM/armstrong.jpg"); background-attachment: fixed; background-size: cover; background-blend-mode: overlay; background-size: 100%; line-height: 1.5;  background-color: rgba(78, 134, 150, 0.466); color:rgb(209, 71, 71); background-repeat: no-repeat; }
+#survey-form{display: grid; display: flex; flex-direction: column; grid-area: survey; width: 500px; min-width:33vw; max-width: 90vw; background-color: rgba(255, 255, 255, 0.829); padding: 30px; border-radius: 5px;}
+label{font-size: 20px;}
+#description {color:rgb(209, 71, 71); padding-bottom: 20px;}
+#title {padding-top: 30px; color:rgb(209, 71, 71);}
+.survey-item{margin-bottom: 25px;}
+#survey-body{display: grid; grid-template-areas: "empty survey empty"; }
+textarea{width: 100%; resize: none;}
+</style>
+
+<body id="page" >
+    <div>
+        <h1 id="title">Typical Politician Survey Form</h1>
+        <p id="description"><i>Thank you for taking your time and sharing your opinion</i></p>
+    </div>
+
+    <div id="survey-body">
+        <form id="survey-form">
+            <div class="survey-item">
+                <label id="name-label"><b>Name</b></label><br>
+                <input type="text" placeholder="name" id="name" required><br>
+            </div>
+
+            <div class="survey-item">
+                <label id="email-label"><b>Email</b></label><br>
+                <input type="email" placeholder="email" id="email" required><br>
+            </div>
+
+            <div class="survey-item">
+                <label id="number-label"><b>Age</b> (optional)</label><br>
+                <input type="number" placeholder="age" id="number" min="0" max="150"><br>
+            </div> 
+
+            <div class="survey-item">
+                <label for="political-preference"><b>Political Preference</b></label><br>
+                <select id="dropdown" name="political-preference">
+                    <option value="typical-american">Typical American</option>
+                    <option value="memes">Memes</option>
+                    <option value="making-the-mother-of-all-omelettes">Making The Mother Of All Omelettes</option>
+                </select><br>
+            </div>
+
+            <div class="survey-item">
+                <label id="rules-of-nature-label"><b>What is the second rule of nature?</b></label><br>
+                <label for="seeking-power"><input type="radio" id="seeking-power" name="rules-of-nature" value="seeking-power">I need more power.</label><br>
+                <label for="ora-ora-ora"><input type="radio" id="ora-ora-ora" name="rules-of-nature" value="ora-ora-ora">ORA ORA ORA!!!</label><br>
+                <label for="supplex-the-metalgear"><input type="radio" id="supplex-the-metalgear" name="rules-of-nature" value="supplex-the-metalgear">If you see a metal gear - supplex it.</label><br>
+            </div>
+            
+            <div class="survey-item">
+                <label id="truth"><b>The truths  you learned after being exposed to MGR:R</b></label><br>
+                <label><input id="truth" type="checkbox" name="truth" value="jack-is-a-terrorist">Jack is a terrorist</label><br>
+                <label><input id="truth" type="checkbox" name="truth" value="memes-are-the-dna-of-the-soul">Memes are the DNA of the soul</label><br>
+                <label><input id="truth" type="checkbox" name="truth" value="children-are-cruel">Children are cruel</label><br>
+                <label><input id="truth" type="checkbox" name="truth" value="women-have-many-arms">Women have many arms</label><br>
+                <label><input id="truth" type="checkbox" name="truth" value="brazilians-can-double-jump">Brazilians can double-jump</label><br>
+            </div>
+
+            <div class="survey-item">
+                <textarea id="comments" name="comments" placeholder="Additional comments"></textarea>
+            </div>
+
+            <div>
+                <input id="submit" type="submit" value="Submit">
+            </div class="survey-item">
+        </form>
+    </div>
+</body>
